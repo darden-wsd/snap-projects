@@ -125,7 +125,7 @@
     game.isMovingRight=true;
     game.lives=3;
     game.enemyCount=24; // make this miltiples of 3 so we can always have 3 rows
-    game.bulletCount=3;
+    game.bulletCount=6;
     game.bulletSpeed=10;
     
     game.player.hide();
