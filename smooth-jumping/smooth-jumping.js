@@ -16,6 +16,8 @@
   game.platforms.push(getSprite('platform1'));
   game.platforms.push(getSprite('platform2'));
   game.platforms.push(getSprite('platform3'));
+  game.platforms.push(getSprite('platform4'));
+  game.platforms.push(getSprite('platform5'));
 
   resetIntervals(game.intervals);
   game.intervals = [];
