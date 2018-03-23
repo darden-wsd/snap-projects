@@ -13,6 +13,7 @@
   game.fallingInterval = 0;
   game.playerLanded = false;
   
+  // add as many platforms as needed
   game.platforms.push(getSprite('platform1'));
   game.platforms.push(getSprite('platform2'));
   game.platforms.push(getSprite('platform3'));
