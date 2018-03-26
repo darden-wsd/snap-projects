@@ -14,11 +14,12 @@
   game.playerLanded = false;
   
   // add as many platforms as needed
-  game.platforms.push(getSprite('platform1'));
-  game.platforms.push(getSprite('platform2'));
-  game.platforms.push(getSprite('platform3'));
-  game.platforms.push(getSprite('platform4'));
-  game.platforms.push(getSprite('platform5'));
+  addPlatormSprites();
+  // game.platforms.push(getSprite('platform1'));
+  // game.platforms.push(getSprite('platform2'));
+  // game.platforms.push(getSprite('platform3'));
+  // game.platforms.push(getSprite('platform4'));
+  // game.platforms.push(getSprite('platform5'));
 
   resetIntervals(game.intervals);
   game.intervals = [];
@@ -34,7 +35,6 @@
     var kc = e.keyCode || e.which;
     keys[kc] = e.type == 'keydown';
   };
-  
   
   game.intervals.push(setInterval(function() {
     detectPlayerLanding();
@@ -64,6 +64,17 @@
       doJump();
     }
   };
+
+
+  // add all the platform sprites to our array
+  function addPlatormSprites(spriteName) {
+    for (var i=0; i < game.stage.children.length; i++) {
+      if (game.stage.children[i].name.indexOf("platform_") === 0) {
+        game.platforms.push(game.stage.children[i]);
+      }
+    }
+  }
+
   
   function getSprite(spriteName) {
     for (var i=0; i < game.stage.children.length; i++) {
@@ -124,6 +135,14 @@
     for (var i=0; i < game.platforms.length; i++) {
       if (aIsLanded(game.player, game.platforms[i])) {
         game.playerLanded = true;
+        // in case the player has fallen through the platform a bit, reposition
+        // var platformHeight =
+        var platformHeight = (game.platforms[i].bounds.corner.y - game.platforms[i].bounds.origin.y) / 2;
+        var playerHeight = (game.player.bounds.corner.y - game.player.bounds.origin.y) / 2;
+        // ((game.player.penBounds.corner.y - game.player.penBounds.origin.y) / 2);
+        // +
+        // ((game.platforms[i].penBounds.corner.y - game.platforms[i].penBounds.origin.y) / 2);
+        game.player.setYPosition(game.platforms[i].yPosition() + playerHeight + platformHeight + 1);
         break;
       }
     }
@@ -132,15 +151,20 @@
   
   /* detect if a is touching the top of b */
   function aIsLanded(a, b) {
+      // a = player
+      // b = platform
+      // B = bottom
+      // T = top
+      // L = left
+      // R = Right
       var aB = a.bounds.corner.y;
       var bT = b.bounds.origin.y;
       
       // reduce the hitbox on the player
-      var aL = a.bounds.origin.x + 5;
-      var aR = a.bounds.corner.x - 5;
+      var aL = a.bounds.origin.x + 2;
+      var aR = a.bounds.corner.x - 2;
 
       var bL = b.bounds.origin.x;
       var bR = b.bounds.corner.x;
-      
-      return (aB > bT && (aR > bL && aL < bR));
+      return (aB > bT && aB < bT+5 && aR > bL && aL < bR);
   }
