@@ -1,1 +1,196 @@
-<project name="SmoothJumpingJS" app="Snap! 4.1, http://snap.berkeley.edu" version="1"><notes></notes><thumbnail>data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAAB4CAYAAAB1ovlvAAADu0lEQVR4Xu3dT2paQRzA8RljrxEwgZ6lN3DhAbpoFxZqcaeioIK0q5a0mxDoH1x27RnaK8RNb6GZYkpDA7GL4cn3xfkKXXTx3m/mOx+ewQiJKaUUfFkAKhAFCJV37G0BAQoBLSBANL/DBagBtIAA0fwOF6AG0AICRPM7XIAaQAsIEM3vcAFqAC0gQDS/wwWoAbSAANH8DhegBtACAkTzO1yAGkALCBDN73ABagAtIEA0v8MFqAG0gADR/A4XoAbQAgJE8ztcgBpACwgQze9wAWoALSBANL/DBagBtIAA0fwOF6AG0AICRPM7XIAaQAsIEM3vcAFqAC0gQDS/wwWoAbSAANH8DhegBtACAkTzO1yAGkALCBDN73ABagAtIEA0v8MFqAG0gADR/A4XoAbQAgJE8ztcgBpACwgQze9wAWoALSBANL/DBagBtIAA0fwOF6AG0AICRPM7XIAaQAsIEM3vcAFqAC0gQDS/wwWoAbSAANH8DhegBtACAkTzO1yAGkALCBDN73ABagAtIEA0v8MFqAG0gADR/A4XoAbQAgJE8ztcgBpACwgQze9wAWoALSBANL/DBagBtIAA0fz5w9vtdv7FB7hyuVxm3VWAWdn4i2KM/CL+WUFKKWs9AszKxl8kQP4Mil6BAIs+fn7zAuTPoOgVCLDo4+c3L0D+DIpegQCLPn5+8wLkz6DoFbRarQf3f7PdhBBuDtAmhsbJk733vb6+zprp54BZ2byoqgICrKqk98kqIMCsbF5UVQEBVlXS+2QVEGBWNi+qqoAAqyrpfbIKCDArmxdVVaB4gKvV6sGWf77flvcdt/2HE8P/PkA+OzsL5+fnVZ3to7hP8QDr9BuFwWAQhsPho4BT1SIFWKNvFguwKtaP6D4+AdnD8gnoExAVKEABCpAs4FswWT8En4A+AVGBAhSgAMkCvgWT9X0LZus7nf8ZcDabhfl8fncU3W437D6Q9VVGAfxnwN2vnkaj0V3tfr8fptNpGfXdJf8EFGDZCn0Cln3++O4FiB9B2QsQYNnnj+9egPgRlL2AuNls0na7xSqMx+MwmUzu5vd6vXv/xxbm4IMXaDabIV5eXqarq6uDD9s3YL1eh92/v6/T09Ow+2q6r+MvsFgsQuy/ep5m7z4e/27dYe0KfP92EeLrF520eP+ldotzQcdfYPlpIMDjP+b67lCA9T2bIlZ2C/DNy056+8G34CJOvGab/HoxCPHn50769UOA2WdzsL8Xc7AbZ28198IYG6HROLl/eWyEp8/G4Tfv4GlIfvLq+QAAAABJRU5ErkJggg==</thumbnail><stage name="Stage" width="480" height="360" costume="1" tempo="60" threadsafe="false" lines="round" ternary="true" codify="false" inheritance="false" sublistIDs="false" scheduled="false" id="1"><pentrails>data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeAAAAFoCAYAAACPNyggAAAOhUlEQVR4Xu3VwQkAAAjEMN1/abewn7jAQRC64wgQIECAAIF3gX1fNEiAAAECBAiMAHsCAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQICLAfIECAAAECgYAAB+gmCRAgQICAAPsBAgQIECAQCAhwgG6SAAECBAgIsB8gQIAAAQKBgAAH6CYJECBAgIAA+wECBAgQIBAICHCAbpIAAQIECAiwHyBAgAABAoGAAAfoJgkQIECAgAD7AQIECBAgEAgIcIBukgABAgQIHLFxAWmhEwHPAAAAAElFTkSuQmCC</pentrails><costumes><list id="2"><item><costume name="Untitled" center-x="240" center-y="297.5" image="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeAAAAFoCAYAAACPNyggAAAQ4UlEQVR4Xu3dTYoeVRSA4WqzMbOAbycODC6ks5cGp8kS3IQzJ4IiCN2RBBR/SPDqTb91bz0ZV+rUfeqUL98geHf4Q4AAAQIECDy7wN2zTzSQAAECBAgQOATYEhAgQIAAgUBAgAN0IwkQIECAgADbAQIECBAgEAgIcIBuJAECBAgQEGA7QIAAAQIEAgEBDtCNJECAAAECAmwHCBAgQIBAICDAAbqRBAgQIEBAgO0AAQIECBAIBAQ4QDeSAAECBAgIsB0gQIAAAQKBgAAH6EYSIECAAAEBtgMECBAgQCAQEOAA3UgCBAgQICDAdoAAAQIECAQCAhygG0mAAAECBATYDhAgQIAAgUBAgAN0IwkQIECAgADbAQIECBAgEAgIcIBuJAECBAgQEGA7QIAAAQIEAgEBDtCNJECAAAECAmwHCBAgQIBAICDAAbqRBAgQIEBAgO0AAQIECBAIBAQ4QDeSAAECBAgIsB0gQIAAAQKBgAAH6EYSIECAAAEBtgMECBAgQCAQEOAA3UgCBAgQICDAdoAAAQIECAQCAhygG0mAAAECBATYDhAgQIAAgUBAgAN0IwkQIECAgADbAQIECBAgEAgIcIBuJAECBAgQEGA7QIAAAQIEAgEBDtCNJECAAAECAmwHCBAgQIBAICDAAbqRBAgQIEBAgO0AAQIECBAIBAQ4QDeSAAECBAgIsB0gQIAAAQKBgAAH6EYSIECAAAEBtgMECBAgQCAQEOAA3UgCBAgQICDAdoAAAQIECAQCAhygG0mAAAECBATYDhAgQIAAgUBAgAN0IwkQIECAgADbAQIECBAgEAgIcIBuJAECBAgQEGA7QIAAAQIEAgEBDtCNJECAAAECAmwHCBAgQIBAICDAAbqRBAgQIEBAgO0AAQIECBAIBAQ4QDeSAAECBAgIsB0gQIAAAQKBgAAH6EYSIECAAAEBtgMECBAgQCAQEOAA3UgCBAgQICDAdoAAAQIECAQCAhygG0mAAAECBATYDhAgQIAAgUBAgAN0IwkQIECAgADbAQIECBAgEAgIcIBuJAECBAgQEGA7QIAAAQIEAgEBDtCNJECAAAECAmwHCBAgQIBAICDAAbqRBAgQIEBAgO0AAQIECBAIBAQ4QDeSAAECBAgIsB0gQIAAAQKBgAAH6EYSIECAAAEBtgMECBAgQCAQEOAA3UgCBAgQICDAdoAAAQIECAQCAhygG0mAAAECBATYDhAgQIAAgUBAgAN0IwkQIECAgADbAQIECBAgEAgIcIBuJAECBAgQEGA7QIAAAQIEAgEBDtCNJECAAAECAmwHCBAgQIBAICDAAbqRBAgQIEBAgO0AAQIECBAIBAQ4QDeSAAECBAgIsB0gQIAAAQKBgAAH6EYSIECAAAEBtgMECBAgQCAQEOAA3UgCBAgQICDAdoAAAQIECAQCAhygG0mAAAECBATYDhAgQIAAgUBAgAN0IwkQIECAgADbAQIECBAgEAgIcIBuJAECBAgQEGA7QIAAAQIEAgEBDtCNJECAAAECAmwHCBAgQIBAICDAAbqRBAgQIEBAgO0AAQIECBAIBAQ4QDeSAAECBAgIsB0gQIAAAQKBgAAH6EYSIECAAAEBtgMECBAgQCAQEOAA3UgCBAgQICDAdoAAAQIECAQCAhygG0mAAAECBATYDhAgQIAAgUBAgAN0IwkQIECAgADbAQIECBAgEAgIcIBuJAECBAgQEGA7QIAAAQIEAgEBDtCNJECAAAECAmwHCBAgQIBAICDAAbqRBAgQIEBAgO0AAQIECBAIBAQ4QDeSAAECBAgIsB0gQIAAAQKBgAAH6EYSIECAAAEBtgMECBAgQCAQEOAA3UgCBAgQICDAdoAAAQIECAQCAhygG0mAAAECBATYDhAgQIAAgUBAgAN0IwkQIECAgADbAQIECBAgEAgIcIBuJAECBAgQEGA7QIAAAQIEAgEBDtCNJECAAAECAmwHCBAgQIBAICDAAbqRBAgQIEBAgO0AAQIECBAIBAQ4QDeSAAECBAgIsB0gQIAAAQKBgAAH6EYSIECAAAEBtgMECBAgQCAQEOAA3UgCBAgQICDAdoAAAQIECAQCAhygG0mAAAECBATYDhAgQIAAgUBAgAN0IwkQIECAgADbAQIECBAgEAgIcIBuJAECBAgQEGA7QIAAAQIEAgEBDtCNJECAAAECAmwHCBAgQIBAICDAAbqRBAgQIEBAgO0AAQIECBAIBAQ4QDeSAAECBAgIsB0gQIAAAQKBgAAH6EYSIECAAAEBtgMECBAgQCAQEOAA3UgCBAgQICDAdoAAAQIECAQCAhygG0mAAAECBATYDhAgQIAAgUBAgAN0IwkQIECAgADbAQIE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" id="3"/></item></list></costumes><sounds><list id="4"></list></sounds><variables></variables><blocks></blocks><scripts><script x="51" y="29"><block s="doRun"><block s="reportJSFunction"><list></list><block s="reportURL"><l>https://raw.githubusercontent.com/dardenhome/snap-projects/master/smooth-jumping/smooth-jumping.js</l></block></block><list></list></block></script></scripts><sprites><sprite name="platform1" idx="2" x="6.608695652172647" y="-118.96536477523976" heading="90" scale="1" rotation="1" draggable="true" costume="1" color="132.6,7.9560000000000075,0" pen="tip" id="19"><costumes><list id="20"><item><costume name="Untitled" center-x="54" center-y="15" image="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGwAAAAeCAYAAADJjPsHAAAAiUlEQVRoQ+3TAQ2AQBDEwH1nOEcaBBkTegqa9vZsu9YxBs62h6ENdAXDnqBgBcMMYLgtrGCYAQy3hRUMM4DhtrCCYQYw3BZWMMwAhtvCCoYZwHBbWMEwAxhuCysYZgDDbWEFwwxguC2sYJgBDLeFFQwzgOG2sIJhBjDcFlYwzACG+y3sxph/jfsCJAQdAlb2KVYAAAAASUVORK5CYII=" id="21"/></item></list></costumes><sounds><list id="22"></list></sounds><blocks></blocks><variables></variables><scripts></scripts></sprite><sprite name="platform2" idx="3" x="145.60869565217453" y="-66.96536477523976" heading="90" scale="1" rotation="1" draggable="true" costume="1" color="132.6,7.9560000000000075,0" pen="tip" id="26"><costumes><list id="27"><item><costume name="Untitled" center-x="54" center-y="15" image="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGwAAAAeCAYAAADJjPsHAAAAiUlEQVRoQ+3TAQ2AQBDEwH1nOEcaBBkTegqa9vZsu9YxBs62h6ENdAXDnqBgBcMMYLgtrGCYAQy3hRUMM4DhtrCCYQYw3BZWMMwAhtvCCoYZwHBbWMEwAxhuCysYZgDDbWEFwwxguC2sYJgBDLeFFQwzgOG2sIJhBjDcFlYwzACG+y3sxph/jfsCJAQdAlb2KVYAAAAASUVORK5CYII=" id="28"/></item></list></costumes><sounds><list id="29"></list></sounds><blocks></blocks><variables></variables><scripts></scripts></sprite><sprite name="platform3" idx="4" x="1.7273397199707055" y="-168.72940906814208" heading="90" scale="1" rotation="1" draggable="true" costume="2" color="132.6,7.9560000000000075,0" pen="tip" id="33"><costumes><list id="34"><item><costume name="Untitled" center-x="54" center-y="15" image="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGwAAAAeCAYAAADJjPsHAAAAiUlEQVRoQ+3TAQ2AQBDEwH1nOEcaBBkTegqa9vZsu9YxBs62h6ENdAXDnqBgBcMMYLgtrGCYAQy3hRUMM4DhtrCCYQYw3BZWMMwAhtvCCoYZwHBbWMEwAxhuCysYZgDDbWEFwwxguC2sYJgBDLeFFQwzgOG2sIJhBjDcFlYwzACG+y3sxph/jfsCJAQdAlb2KVYAAAAASUVORK5CYII=" id="35"/></item><item><costume name="Untitled(2)" center-x="240" center-y="10" image="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAeAAAAAUCAYAAABVoO4uAAABFUlEQVR4Xu3VsQ3AIBADQLIZo7NZIiKlyAK48LGA8X3ha3gECBAgQIDAcYFrjDGPpwokQIAAAQKdAuurvQf47jTQmgABAgQIHBfYu/s+A3zcXiABAgQIFAsY4OLjq06AAAECOQEDnLOXTIAAAQLFAga4+PiqEyBAgEBOwADn7CUTIECAQLGAAS4+vuoECBAgkBMwwDl7yQQIECBQLGCAi4+vOgECBAjkBAxwzl4yAQIECBQLGODi46tOgAABAjkBA5yzl0yAAAECxQIGuPj4qhMgQIBATsAA5+wlEyBAgECxgAEuPr7qBAgQIJATMMA5e8kECBAgUCxggIuPrzoBAgQI5AR+A7xy/5BMgAABAgSqBObX9gGQohMVXjD/QAAAAABJRU5ErkJggg==" id="36"/></item></list></costumes><sounds><list id="37"></list></sounds><blocks></blocks><variables></variables><scripts></scripts></sprite><sprite name="player" idx="1" x="-135.0248447204978" y="-150.6502653867656" heading="270" scale="0.5" rotation="2" draggable="true" costume="1" color="80,80,80" pen="tip" id="41"><costumes><list id="42"><item><costume name="Untitled" center-x="13.5" center-y="28.5" image="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABsAAAA5CAYAAADHsFBoAAAAaElEQVRYR+3WMQ6AIBAEwOVnPt2faWFDpeRyUg092WSyWRhJjmw6I8m1KSvCWqQxYnwVUBAFUZCWDmDEWBcwxHW76SZGjIa4pQMYMdYFDHHdznvWYocR46qAuVqV8i1okfpkPP+PeRJu++c4AyAmr/YAAAAASUVORK5CYII=" id="43"/></item></list></costumes><sounds><list id="44"></list></sounds><blocks></blocks><variables></variables><scripts></scripts></sprite></sprites></stage><hidden></hidden><headers></headers><code></code><blocks><block-definition s="label %&apos;text&apos; of size %&apos;size&apos;" type="command" category="pen"><comment x="0" y="0" w="90" collapsed="false">LABEL will stamp text on the stage at the given font size. The direction of the text is the direction the sprite is facing, and color will match the pen color.</comment><header></header><code></code><translations>de:drucke _ in Größe _&#xD;</translations><inputs><input type="%txt">Hello!</input><input type="%n">12</input></inputs><script><block s="doRun"><block s="reportJSFunction"><list><l>text</l><l>size</l></list><l>var stage = this.parentThatIsA(StageMorph),&#xD;    context = stage.penTrails().getContext(&apos;2d&apos;),&#xD;    rotation = radians(this.direction() - 90),&#xD;    trans = new Point(&#xD;      this.center().x - stage.left(),&#xD;      this.center().y - stage.top()&#xD;    ),&#xD;    isWarped = this.Warped,&#xD;    len,&#xD;    pos;&#xD;&#xD;if (isWarped) {endWarp(); }&#xD;context.save();&#xD;context.font = size + &apos;px monospace&apos;;&#xD;context.textAlign = &apos;left&apos;;&#xD;context.textBaseline = &apos;alphabetic&apos;;&#xD;context.fillStyle = this.color.toString();&#xD;len = context.measureText(text).width;&#xD;trans = trans.multiplyBy(1 / stage.scale);&#xD;context.translate(trans.x, trans.y);&#xD;context.rotate(rotation);&#xD;context.fillText(text, 0, 0);&#xD;context.translate(-trans.x, -trans.y);&#xD;context.restore();&#xD;pos = new Point(&#xD;  len * Math.sin(radians(this.direction())),&#xD;  len * Math.cos(radians(this.direction())));&#xD;pos = pos.add(new Point(this.xPosition(), this.yPosition()));&#xD;this.gotoXY(pos.x, pos.y, false);&#xD;this.changed();&#xD;if (isWarped) {this.startWarp(); }&#xD;stage.changed();</l></block><list><block var="text"/><block var="size"/></list></block></script></block-definition><block-definition s="empty? %&apos;data&apos;" type="predicate" category="lists"><header></header><code></code><translations>de:ist _ leer?&#xD;</translations><inputs><input type="%l"></input></inputs><script><block s="doReport"><block s="reportEquals"><block var="data"/><block s="reportNewList"><list></list></block></block></block></script></block-definition><block-definition s="keep items such that %&apos;pred&apos; from %&apos;data&apos;" type="reporter" category="lists"><header></header><code></code><translations>de:behalte Elemente, die _ aus _&#xD;</translations><inputs><input type="%predRing"></input><input type="%l"></input></inputs><script><block s="doIf"><custom-block s="empty? %l"><block var="data"/></custom-block><script><block s="doReport"><block s="reportNewList"><list></list></block></block></script></block><block s="doIfElse"><block s="evaluate"><block var="pred"/><list><block s="reportListItem"><l>1</l><block var="data"/></block></list></block><script><block s="doReport"><block s="reportCONS"><block s="reportListItem"><l>1</l><block var="data"/></block><custom-block s="keep items such that %predRing from %l"><block var="pred"/><block s="reportCDR"><block var="data"/></block></custom-block></block></block></script><script><block s="doReport"><custom-block s="keep items such that %predRing from %l"><block var="pred"/><block s="reportCDR"><block var="data"/></block></custom-block></block></script></block></script></block-definition><block-definition s="combine with %&apos;function&apos; items of %&apos;data&apos;" type="reporter" category="lists"><header></header><code></code><translations>de:kombiniere mit _ die Elemente von _&#xD;</translations><inputs><input type="%repRing"></input><input type="%l"></input></inputs><script><block s="doIf"><custom-block s="empty? %l"><block s="reportCDR"><block var="data"/></block></custom-block><script><block s="doReport"><block s="reportListItem"><l>1</l><block var="data"/></block></block></script></block><block s="doReport"><block s="evaluate"><block var="function"/><list><block s="reportListItem"><l>1</l><block var="data"/></block><custom-block s="combine with %repRing items of %l"><block var="function"/><block s="reportCDR"><block var="data"/></block></custom-block></list></block></block></script></block-definition><block-definition s="if %&apos;test&apos; then %&apos;true&apos; else %&apos;false&apos;" type="reporter" category="control"><header></header><code></code><translations>de:wenn _ dann _ sonst _&#xD;</translations><inputs><input type="%b"></input><input type="%anyUE"></input><input type="%anyUE"></input></inputs><script><block s="doIfElse"><block var="test"/><script><block s="doReport"><block s="evaluate"><block var="true"/><list></list></block></block></script><script><block s="doReport"><block s="evaluate"><block var="false"/><list></list></block></block></script></block></script></block-definition><block-definition s="for %&apos;i&apos; = %&apos;start&apos; to %&apos;end&apos; %&apos;action&apos;" type="command" category="control"><header></header><code></code><translations>de:für _ = _ bis _ _&#xD;</translations><inputs><input type="%upvar"></input><input type="%n">1</input><input type="%n">10</input><input type="%cs"></input></inputs><script><block s="doDeclareVariables"><list><l>step</l><l>tester</l></list></block><block s="doIfElse"><block s="reportGreaterThan"><block var="start"/><block var="end"/></block><script><block s="doSetVar"><l>step</l><l>-1</l></block><block s="doSetVar"><l>tester</l><block s="reifyReporter"><autolambda><block s="reportLessThan"><block var="i"/><block var="end"/></block></autolambda><list></list></block></block></script><script><block s="doSetVar"><l>step</l><l>1</l></block><block s="doSetVar"><l>tester</l><block s="reifyReporter"><autolambda><block s="reportGreaterThan"><block var="i"/><block var="end"/></block></autolambda><list></list></block></block></script></block><block s="doSetVar"><l>i</l><block var="start"/></block><block s="doUntil"><block s="evaluate"><block var="tester"/><list></list></block><script><block s="doRun"><block var="action"/><list></list></block><block s="doChangeVar"><l>i</l><block var="step"/></block></script></block></script></block-definition><block-definition s="join words %&apos;words&apos;" type="reporter" category="operators"><header></header><code></code><translations>de:füge Wörter zusammen _&#xD;</translations><inputs><input type="%mult%txt"></input></inputs><script><block s="doIf"><custom-block s="empty? %l"><block s="reportCDR"><block var="words"/></block></custom-block><script><block s="doReport"><block s="reportListItem"><l>1</l><block var="words"/></block></block></script></block><block s="doIf"><block s="reportEquals"><l></l><block s="reportListItem"><l>1</l><block var="words"/></block></block><script><block s="doReport"><custom-block s="join words %mult%txt"><block s="reportCDR"><block var="words"/></block></custom-block></block></script></block><block s="doIf"><block s="reportEquals"><l></l><block s="reportListItem"><l>2</l><block var="words"/></block></block><script><block s="doReport"><custom-block s="join words %mult%txt"><block s="reportCONS"><block s="reportListItem"><l>1</l><block var="words"/></block><block s="reportCDR"><block s="reportCDR"><block var="words"/></block></block></block></custom-block></block></script></block><block s="doReport"><block s="reportJoinWords"><list><block s="reportListItem"><l>1</l><block var="words"/></block><l> </l><custom-block s="join words %mult%txt"><block s="reportCDR"><block var="words"/></block></custom-block></list></block></block></script></block-definition><block-definition s="list $arrowRight sentence %&apos;data&apos;" type="reporter" category="operators"><header></header><code></code><translations>de:Liste $arrowRight Satz _&#xD;</translations><inputs><input type="%l"></input></inputs><script><block s="doReport"><custom-block s="join words %mult%txt"><block var="data"/></custom-block></block></script></block-definition><block-definition s="sentence $arrowRight list %&apos;text&apos;" type="reporter" category="operators"><header></header><code></code><translations>de:Satz $arrowRight Liste _&#xD;</translations><inputs><input type="%txt"></input></inputs><script><block s="doReport"><block s="reportTextSplit"><block var="text"/><l><option>whitespace</option></l></block></block></script></block-definition><block-definition s="catch %&apos;tag&apos; %&apos;action&apos;" type="command" category="control"><header></header><code></code><translations>de:fange _ _&#xD;</translations><inputs><input type="%upvar"></input><input type="%cs"></input></inputs><script><block s="doCallCC"><block s="reifyScript"><script><block s="doSetVar"><l>tag</l><block var="cont"/></block><block s="doRun"><block var="action"/><list></list></block></script><list><l>cont</l></list></block></block><custom-block s="ignore %s"><l>3</l></custom-block></script></block-definition><block-definition s="throw %&apos;cont&apos;" type="command" category="control"><header></header><code></code><translations>de:wirf _&#xD;</translations><inputs><input type="%s">catchtag</input></inputs><script><block s="doRun"><block var="cont"/><list></list></block></script></block-definition><block-definition s="catch %&apos;tag&apos; %&apos;value&apos;" type="reporter" category="control"><header></header><code></code><translations>de:fange _ _&#xD;</translations><inputs><input type="%upvar"></input><input type="%anyUE"></input></inputs><script><block s="doCallCC"><block s="reifyScript"><script><block s="doSetVar"><l>tag</l><block var="cont"/></block><block s="doReport"><block s="evaluate"><block var="value"/><list></list></block></block></script><list><l>cont</l></list></block></block></script></block-definition><block-definition s="throw %&apos;tag&apos; %&apos;value&apos;" type="command" category="control"><header></header><code></code><translations>de:wirf _ _&#xD;</translations><inputs><input type="%s">catchtag</input><input type="%s"></input></inputs><script><block s="doRun"><block var="tag"/><list><block var="value"/></list></block></script></block-definition><block-definition s="for each %&apos;item&apos; of %&apos;data&apos; %&apos;action&apos;" type="command" category="lists"><header></header><code></code><translations>de:für jedes _ von _ _&#xD;</translations><inputs><input type="%upvar"></input><input type="%l"></input><input type="%cs"></input></inputs><script><block s="doUntil"><custom-block s="empty? %l"><block var="data"/></custom-block><script><block s="doSetVar"><l>item</l><block s="reportListItem"><l>1</l><block var="data"/></block></block><block s="doRun"><block var="action"/><list><block s="reportListItem"><l>1</l><block var="data"/></block></list></block><block s="doSetVar"><l>data</l><block s="reportCDR"><block var="data"/></block></block></script></block></script></block-definition><block-definition s="if %&apos;test&apos; do %&apos;action&apos; and pause all $pause-1-255-220-0" type="command" category="control"><header></header><code></code><translations>de:falls _ dann _ und pause $pause-1-255-220-0&#xD;</translations><inputs><input type="%boolUE"></input><input type="%cs"></input></inputs><script><block s="doDeclareVariables"><list><l>breakpoint</l></list></block><block s="doIf"><block s="evaluate"><block var="test"/><list></list></block><script><block s="doSetVar"><l>breakpoint</l><block var="test"/></block><block s="doShowVar"><l>breakpoint</l></block><block s="doRun"><block var="action"/><list></list></block><block s="doPauseAll"></block><block s="doHideVar"><l></l></block></script></block></script></block-definition><block-definition s="word $arrowRight list %&apos;word&apos;" type="reporter" category="operators"><header></header><code></code><translations>de:Wort $arrowRight Liste _&#xD;</translations><inputs><input type="%txt"></input></inputs><script><block s="doReport"><block s="reportTextSplit"><block var="word"/><l><option>letter</option></l></block></block></script></block-definition><block-definition s="ignore %&apos;x&apos;" type="command" category="control"><header></header><code></code><translations>de:ignoriere _&#xD;</translations><inputs><input type="%s"></input></inputs></block-definition><block-definition s="list $arrowRight word %&apos;list&apos;" type="reporter" category="operators"><header></header><code></code><translations>de:Liste $arrowRight Wort _&#xD;</translations><inputs><input type="%l"></input></inputs><script><block s="doReport"><block s="reportJoinWords"><block var="list"/></block></block></script></block-definition><block-definition s="%&apos;x&apos;" type="reporter" category="operators"><header></header><code></code><translations></translations><inputs><input type="%s"></input></inputs><script><block s="doReport"><block var="x"/></block></script></block-definition><block-definition s="numbers from %&apos;from&apos; to %&apos;to&apos;" type="reporter" category="lists"><header></header><code></code><translations>de:Zahlen von _ bis _&#xD;</translations><inputs><input type="%n">1</input><input type="%n">10</input></inputs><script><block s="doIf"><block s="reportGreaterThan"><block var="from"/><block var="to"/></block><script><block s="doReport"><block s="reportNewList"><list></list></block></block></script></block><block s="doReport"><block s="reportCONS"><block var="from"/><custom-block s="numbers from %n to %n"><block s="reportSum"><block var="from"/><l>1</l></block><block var="to"/></custom-block></block></block></script></block-definition><block-definition s="map %&apos;func&apos; over %&apos;data&apos;" type="reporter" category="lists"><header></header><code></code><translations>de:wende _ an auf _&#xD;</translations><inputs><input type="%repRing"></input><input type="%l"></input></inputs><script><block s="doIf"><custom-block s="empty? %l"><block var="data"/></custom-block><script><block s="doReport"><block var="data"/></block></script></block><block s="doReport"><block s="reportCONS"><block s="evaluate"><block var="func"/><list><block s="reportListItem"><l>1</l><block var="data"/></block></list></block><custom-block s="map %repRing over %l"><block var="func"/><block s="reportCDR"><block var="data"/></block></custom-block></block></block></script></block-definition></blocks><variables></variables></project>
+  if (!window.game) {
+    window.game={};
+  }
+  
+  var game = window.game;
+  game.stage = this;
+  game.player = getSprite('player');
+  game.maxXPos = 240;
+  game.maxYPos = -150;
+  game.isJumping = false;
+  game.isFalling = false;
+  game.isLanded = true;
+  game.platforms = [];
+  game.jumpUpInterval = 0;
+  game.fallingInterval = 0;
+
+  // add as many platforms as needed
+  addPlatormSprites();
+
+  resetIntervals(game.intervals);
+  game.intervals = [];
+  
+  
+  // setup keyboard events
+  var keys = {};
+  keys.SPACE = 32;
+  keys.LEFT = 37;
+  keys.RIGHT = 39;
+  document.body.onkeyup =
+  document.body.onkeydown = function(e) {
+    var kc = e.keyCode || e.which;
+    keys[kc] = e.type == 'keydown';
+  };
+  
+  
+  game.intervals.push(setInterval(function() {
+    detectFloating();
+  }, 1));
+    
+  game.intervals.push(setInterval(function() {
+    detectPlayerLanding();
+  }, 1));
+  
+  game.intervals.push(setInterval(function(){
+    detectCharacterMovement();
+  }, 5)); // 24 frames a sec
+    
+  // character control
+  var detectCharacterMovement = function() {
+    if ( keys[keys.LEFT] ) {
+      if (game.player.xPosition() > -game.maxXPos) {
+        game.player.changeXPosition(-1);
+      }
+    }
+    if ( keys[keys.RIGHT] ) {
+      if (game.player.xPosition() < game.maxXPos) game.player.changeXPosition(1);
+    }
+  };
+
+  game.intervals.push(setInterval(function() {
+    detectSpaceBar();
+  }, 100));
+  
+  // character control
+  var detectSpaceBar = function() {
+    if (keys[keys.SPACE] && !game.isJumping && !game.isFalling) {
+      doJump();
+    }
+  };
+
+
+  // add all the platform sprites to our array
+  function addPlatormSprites(spriteName) {
+    for (var i=0; i < game.stage.children.length; i++) {
+      if (game.stage.children[i].name.indexOf("platform_") === 0) {
+        game.platforms.push(game.stage.children[i]);
+      }
+    }
+  }
+
+  
+  function getSprite(spriteName) {
+    for (var i=0; i < game.stage.children.length; i++) {
+      if (game.stage.children[i].name == spriteName) {
+        return game.stage.children[i];
+      }
+    }
+    console.error('not found ' + spriteName);
+    return false;
+  }
+ 
+  
+  function resetIntervals(iv) {
+    try {
+      if (iv && iv.length > 0) {
+        for (var i=iv.length -1; i>-1; i--) {
+          clearInterval(iv[i]);
+          iv.pop();
+        }
+      }
+    } catch (e) {
+      console.error("error while trying to clear the intervals array", e);
+    }
+  }
+  
+  
+ function doJump() {
+    game.isJumping = true;
+    game.isFalling = false;
+    game.isLanded = false;
+    var height = 100;
+    var speed = 2;
+    var speedInc = 0.02;
+    var i = 0;
+    
+    var jumpInterval = setInterval(function() {
+      i++;
+      game.player.changeYPosition(speed);
+      speed -= speedInc;
+      if (i > height) {
+        clearInterval(jumpInterval);
+        doFall();
+      }
+    }, 1);
+  }
+  
+ function doFall() {
+    game.isFalling = true;
+    var speed = 0;
+    var speedInc = 0.02;
+    var fallInterval = setInterval(function() {
+      game.isFalling = true;
+      game.player.changeYPosition(-speed);
+      speed += speedInc;
+      if (game.isLanded) {
+        clearInterval(fallInterval);
+        game.isJumping = false;
+        game.isFalling = false;
+      }
+    }, 1);
+  }
+  
+  var detectPlayerLanding = function() {
+    for (var i=0; i < game.platforms.length; i++) {
+      if (aIsLanded(game.player, game.platforms[i])) {
+        game.isLanded = true;
+        // in case the player has fallen through the platform a bit, reposition
+        game.player.setBottom(game.platforms[i].top());
+        break;
+      }
+    }
+  };
+  
+  
+  /* detect if a is touching the top of b */
+  function aIsLanded(a, b) {
+      // a = player
+      // b = platform
+      // B = bottom
+      // T = top
+      // L = left
+      // R = Right
+      var aB = a.bottom();
+      var bT = b.top();
+      
+      // reduce the hitbox on the player
+      var aL = a.left() + 2;
+      var aR = a.right() - 2;
+
+      var bL = b.left();
+      var bR = b.right();
+      return (game.isFalling && aB > bT && aB < bT+5 && aR > bL && aL < bR);
+  }
+  
+  var detectFloating = function() {
+    if (!game.isLanded) return;
+    var playerY = game.player.bottom();
+    var isFloating = true;
+    var gap = 0;
+    for (var i=0; i < game.platforms.length; i++) {
+      gap = game.platforms[i].top() - game.player.bottom();
+      // are we above a platform and less than 10 units?
+      console.log(gap);
+      if (gap < 10 &&
+          game.player.right() >= game.platforms[i].left() &&
+          game.player.left() <= game.platforms[i].right()) {
+        isFloating = false;
+        break;
+      }
+    }
+    
+    if (isFloating) {
+      game.isLanded = false;
+      doFall();
+    }
+  }
