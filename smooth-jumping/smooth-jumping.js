@@ -5,21 +5,17 @@
   var game = window.game;
   game.stage = this;
   game.player = getSprite('player');
-  game.maxXPos = 205;
+  game.maxXPos = 240;
   game.maxYPos = -150;
   game.isJumping = false;
+  game.isFalling = false;
+  game.isLanded = true;
   game.platforms = [];
   game.jumpUpInterval = 0;
   game.fallingInterval = 0;
-  game.playerLanded = false;
-  
+
   // add as many platforms as needed
   addPlatormSprites();
-  // game.platforms.push(getSprite('platform1'));
-  // game.platforms.push(getSprite('platform2'));
-  // game.platforms.push(getSprite('platform3'));
-  // game.platforms.push(getSprite('platform4'));
-  // game.platforms.push(getSprite('platform5'));
 
   resetIntervals(game.intervals);
   game.intervals = [];
@@ -36,6 +32,11 @@
     keys[kc] = e.type == 'keydown';
   };
   
+  
+  game.intervals.push(setInterval(function() {
+    detectFloating();
+  }, 1));
+    
   game.intervals.push(setInterval(function() {
     detectPlayerLanding();
   }, 1));
@@ -47,7 +48,9 @@
   // character control
   var detectCharacterMovement = function() {
     if ( keys[keys.LEFT] ) {
-      if (game.player.xPosition() > -game.maxXPos) game.player.changeXPosition(-1);
+      if (game.player.xPosition() > -game.maxXPos) {
+        game.player.changeXPosition(-1);
+      }
     }
     if ( keys[keys.RIGHT] ) {
       if (game.player.xPosition() < game.maxXPos) game.player.changeXPosition(1);
@@ -60,7 +63,7 @@
   
   // character control
   var detectSpaceBar = function() {
-    if (keys[keys.SPACE] && !game.isJumping) {
+    if (keys[keys.SPACE] && !game.isJumping && !game.isFalling) {
       doJump();
     }
   };
@@ -103,46 +106,46 @@
   
  function doJump() {
     game.isJumping = true;
+    game.isFalling = false;
+    game.isLanded = false;
     var height = 100;
     var speed = 2;
     var speedInc = 0.02;
     var i = 0;
     
-    var jumpInterval1 = setInterval(function() {
+    var jumpInterval = setInterval(function() {
       i++;
       game.player.changeYPosition(speed);
       speed -= speedInc;
       if (i > height) {
-        clearInterval(jumpInterval1);
-        i = 0;
-        speed += speedInc;
-        game.player.changeYPosition(-speed);
-        var jumpInterval2 = setInterval(function() {
-          i++;
-          game.player.changeYPosition(-speed);
-          speed += speedInc;
-          if (game.playerLanded) {
-            clearInterval(jumpInterval2);
-            game.isJumping = false;
-          }
-        }, 1);
+        clearInterval(jumpInterval);
+        doFall();
+      }
+    }, 1);
+  }
+  
+ function doFall() {
+    game.isFalling = true;
+    var speed = 0;
+    var speedInc = 0.02;
+    var fallInterval = setInterval(function() {
+      game.isFalling = true;
+      game.player.changeYPosition(-speed);
+      speed += speedInc;
+      if (game.isLanded) {
+        clearInterval(fallInterval);
+        game.isJumping = false;
+        game.isFalling = false;
       }
     }, 1);
   }
   
   var detectPlayerLanding = function() {
-    game.playerLanded = false;
     for (var i=0; i < game.platforms.length; i++) {
       if (aIsLanded(game.player, game.platforms[i])) {
-        game.playerLanded = true;
+        game.isLanded = true;
         // in case the player has fallen through the platform a bit, reposition
-        // var platformHeight =
-        var platformHeight = (game.platforms[i].bounds.corner.y - game.platforms[i].bounds.origin.y) / 2;
-        var playerHeight = (game.player.bounds.corner.y - game.player.bounds.origin.y) / 2;
-        // ((game.player.penBounds.corner.y - game.player.penBounds.origin.y) / 2);
-        // +
-        // ((game.platforms[i].penBounds.corner.y - game.platforms[i].penBounds.origin.y) / 2);
-        game.player.setYPosition(game.platforms[i].yPosition() + playerHeight + platformHeight + 1);
+        game.player.setBottom(game.platforms[i].top());
         break;
       }
     }
@@ -157,14 +160,37 @@
       // T = top
       // L = left
       // R = Right
-      var aB = a.bounds.corner.y;
-      var bT = b.bounds.origin.y;
+      var aB = a.bottom();
+      var bT = b.top();
       
       // reduce the hitbox on the player
-      var aL = a.bounds.origin.x + 2;
-      var aR = a.bounds.corner.x - 2;
+      var aL = a.left() + 2;
+      var aR = a.right() - 2;
 
-      var bL = b.bounds.origin.x;
-      var bR = b.bounds.corner.x;
-      return (aB > bT && aB < bT+5 && aR > bL && aL < bR);
+      var bL = b.left();
+      var bR = b.right();
+      return (game.isFalling && aB > bT && aB < bT+5 && aR > bL && aL < bR);
+  }
+  
+  var detectFloating = function() {
+    if (!game.isLanded) return;
+    var playerY = game.player.bottom();
+    var isFloating = true;
+    var gap = 0;
+    for (var i=0; i < game.platforms.length; i++) {
+      gap = game.platforms[i].top() - game.player.bottom();
+      // are we above a platform and less than 10 units?
+      console.log(gap);
+      if (gap < 10 &&
+          game.player.right() >= game.platforms[i].left() &&
+          game.player.left() <= game.platforms[i].right()) {
+        isFloating = false;
+        break;
+      }
+    }
+    
+    if (isFloating) {
+      game.isLanded = false;
+      doFall();
+    }
   }
